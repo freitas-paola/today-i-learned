@@ -45,7 +45,12 @@ function App() {
           <img src="./logo.png" alt="Today I Learned logo" />
           <h1>Today I Learned</h1>
         </div>
-        <button className="btn btn-large btn-open-form">Share a Fact</button>
+        <button
+          className="btn btn-large btn-open-form"
+          onClick={() => setShowForm((show) => !show)}
+        >
+          Share a Fact
+        </button>
       </header>
 
       {showForm ? <NewFactForm /> : null}
